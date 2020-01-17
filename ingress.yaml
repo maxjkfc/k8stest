@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: my-ingress
+spec:
+  rules:
+  - http:
+      paths:
+      - path: /*
+        backend:
+          serviceName: test-nginx
+          servicePort: 80
+      - path: /discounted
+        backend:
+          serviceName: test-nginx-2
+          servicePort: 80
