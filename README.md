@@ -13,7 +13,9 @@
 
     kubectl describe pods redis-nginx #查看 redis-nginx pod 內的詳細資料
 
-    kubectl port-forward pod/redis-nginx  80:8080 #將遠端 pod 的 port 映射至本地 port
+    kubectl port-forward pod/redis-nginx  8080:80 #將遠端 pod 的 port 映射至本地 port
+
+    kubectl logs redis-nginx frontend
 
     kubectl delete -f multiple-container.yaml #刪除 pods
 ```
