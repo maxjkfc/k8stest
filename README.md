@@ -34,15 +34,12 @@
     kubectl get pods 
 
     kubectl scale deployment nginx-deployment --replicas=3  #擴展 deployments數量為 3
+    kubectl replace -f nginx-deployment.yaml
+    kubectl edit deployments. nginx-deployment
 
     kubectl get deployments 
 
-    kubectl set image deployment/nginx-deployment nginx=nginx:1.9.1 --record　#升級版本
-
-    kubectl get pods -o json | jq '.items[].spec.containers[].image' #查看版本
-
-
-
+    
 
 ```
 ### rollup 
